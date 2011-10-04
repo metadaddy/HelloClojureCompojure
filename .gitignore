@@ -1,0 +1,7 @@
+build
+classes
+lib
+*.keystore
+.DS_Store
+vars.sh
+localvars.sh
