@@ -1,5 +1,5 @@
 (defproject clojure-force-sample "1.0.0"
-  :description "Force.com REST API Sample in Clojure"
+  :description "Hello World Clojure Web App"
   :dependencies [[org.clojure/clojure "1.2.0"]
                  [org.clojure/clojure-contrib "1.2.0"]
                  [compojure "0.4.1"]
