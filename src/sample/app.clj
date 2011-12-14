@@ -1,13 +1,13 @@
 (ns sample.app
-  (:use (ring.adapter jetty)
-        (compojure core)))
+  (:use [compojure.core :only [defroutes GET]])
+  (:require [ring.adapter.jetty :as jetty]))
 
 (defroutes handler
   (GET "/" []
-  {:headers {"Content-type" "text/html; charset=UTF-8"}
-   :body "Hello world!"}))
+       {:headers {"Content-type" "text/html; charset=UTF-8"}
+        :body "Hello world!"}))
 
 (defn -main []
-  (run-jetty 
-    handler
-    {:port (Integer/parseInt (get (System/getenv) "PORT" "8080"))}))
+  (jetty/run-jetty handler
+                   {:port (Integer/parseInt
+                           (or (System/getenv "PORT") "8080"))}))
