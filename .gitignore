@@ -5,3 +5,4 @@ lib
 .DS_Store
 vars.sh
 localvars.sh
+/.lein-deps-sum
